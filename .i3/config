@@ -212,4 +212,5 @@ exec_always feh --bg-fill <YOUR_IMAGE_HERE>
 exec_always compton
 
 # Machine-specific window layout
-exec_always xrandr --output VGA-0 --off --output DVI-0 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-0 --primary --mode 1920x1080 --pos 1928x0 --rotate normal
+# Generate the appropriate xrandr command using arandr (or by hand) and copy it here
+# exec_always xrandr <LAYOUT>
