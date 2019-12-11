@@ -178,9 +178,9 @@ bindsym Mod4+shift+x exec i3lock --color 000000
 
 # Use non-default (black-and-white) border colors
 # class                 border  backgr. text    indicator child_border
-client.focused          #ffffff #285577 #ffffff #2e9ef4   #ffffff
+client.focused          #ffffff #000000 #ffffff #2e9ef4   #ffffff
 client.focused_inactive #707070 #5f676a #ffffff #484e50   #707070
-client.unfocused        #707070 #222222 #888888 #292d2e   #707070
+client.unfocused        #707070 #000000 #707070 #292d2e   #707070
 client.urgent           #ff0000 #900000 #ffffff #900000   #ff0000
 client.placeholder      #707070 #0c0c0c #ffffff #000000   #0c0c0c
 
@@ -208,9 +208,8 @@ bar {
 	status_command i3blocks -c ~/.i3/i3blocks.conf
 }
 
-exec_always feh --bg-fill <YOUR_IMAGE_HERE> 
+exec_always feh --bg-fill /home/forbes/Pictures/solar-eclipse-background-hd-1080p-497599.jpg
 exec_always compton
 
 # Machine-specific window layout
-# Generate the appropriate xrandr command using arandr (or by hand) and copy it here
-# exec_always xrandr <LAYOUT>
+exec_always xrandr --output VGA-0 --off --output DVI-0 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-0 --primary --mode 1920x1080 --pos 1928x0 --rotate normal
